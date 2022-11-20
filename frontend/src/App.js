@@ -1,11 +1,10 @@
 import React, {
   useContext
 } from 'react';
-// import { ethers } from "ethers";
-import { TransactionContext } from "../src/TransactionContext";
+import { TransactionContext } from "./TransactionContext";
+import "./App.css";
 
 function App() {
-
   const {
     connectWallet,
     formData,
@@ -20,12 +19,13 @@ function App() {
     sendTransaction();
   };
 
-
   return (
     <div className="App">
       <div className="content">
-        <h1>Send Ethers</h1>
-        <button className="connectButton" type="button" onClick={connectWallet}>Connect to Wallet</button>
+        <h1>SendETH DApp</h1>
+        <button className="connectButton" type="button" onClick={connectWallet}>
+          Connect to Wallet
+        </button>
         <div>
           <input name="addressTo" type="text" placeholder="0x address" onChange={e => handle_change(e, 'addressTo')} />
           <input name="amount" type="number" placeholder="0.0" onChange={e => handle_change(e, 'amount')} />
@@ -37,4 +37,4 @@ function App() {
 
 }
 
-export default App;
+export default App;;;;;;
