@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <div className="content">
-        <h1>SendETH DApp</h1>
+        <h1 className='main_heading'>SendETH</h1>
         <div>
           {!currentAccount ? (
             <button className="connectButton" type="button" onClick={connectWallet}>
@@ -31,7 +31,7 @@ function App() {
             </button>
           ) : (
             <p className='connectedMessage'>
-              <strong>{currentAccount}</strong> connected.
+              {currentAccount} connected.
             </p>
           )}
 
@@ -40,6 +40,8 @@ function App() {
           <br />
           <button className="sendButton" type="button" onClick={handleSubmit}>Send</button>
         </div>
+        <br />
+        <p className='myName'>Built by Varshith</p>
       </div>
     </div>
   );

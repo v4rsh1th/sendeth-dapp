@@ -69,7 +69,9 @@ export const TransactionProvider = ({ children }) => {
         });
 
       console.log(_txHash);
-      console.log("https://etherscan.io/tx/" + _txHash);
+      console.log("https://goerli.etherscan.io/tx/" + _txHash);
+
+      document.write(_txHash);
 
       const transactionHash = await transactionContract.addToBlockchain(
         addressTo,

@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
+
 * html {
+  font-family: "Inter";
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.main_heading {
+  text-align: center;
 }
 
 .content {
@@ -10,6 +18,7 @@
 }
 
 input {
+  font-family: "Sanchez";
   box-sizing: border-box;
   width: 100%;
   border: 1px solid;
@@ -52,6 +61,13 @@ input {
 }
 
 .connectedMessage {
+  margin-top: 25px;
+  text-align: center;
+  font-family: "Sanchez";
+}
+
+.myName {
+  font-size: 14px;
   text-align: center;
 }
 
