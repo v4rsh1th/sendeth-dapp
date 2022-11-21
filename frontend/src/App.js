@@ -8,6 +8,7 @@ function App() {
   const {
     connectWallet,
     formData,
+    currentAccount,
     sendTransaction,
     handle_change
   } = useContext(TransactionContext);
@@ -23,13 +24,21 @@ function App() {
     <div className="App">
       <div className="content">
         <h1>SendETH DApp</h1>
-        <button className="connectButton" type="button" onClick={connectWallet}>
-          Connect to Wallet
-        </button>
         <div>
+          {!currentAccount ? (
+            <button className="connectButton" type="button" onClick={connectWallet}>
+              Connect to Wallet
+            </button>
+          ) : (
+            <p className='connectedMessage'>
+              <strong>{currentAccount}</strong> connected.
+            </p>
+          )}
+
           <input name="addressTo" type="text" placeholder="0x address" onChange={e => handle_change(e, 'addressTo')} />
           <input name="amount" type="number" placeholder="0.0" onChange={e => handle_change(e, 'amount')} />
-          <button className="sentButton" type="button" onClick={handleSubmit}>Send</button>
+          <br />
+          <button className="sendButton" type="button" onClick={handleSubmit}>Send</button>
         </div>
       </div>
     </div>
@@ -37,4 +46,4 @@ function App() {
 
 }
 
-export default App;;;;;;
+export default App;
