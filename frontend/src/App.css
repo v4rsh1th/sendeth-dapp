@@ -34,11 +34,12 @@ input {
 
 .connectButton {
   width: 100%;
-  /* background-image: linear-gradient(to bottom, #ff1764 0%, #f70052 100%); */
+  background-image: linear-gradient(90deg, #cd38b1 0, #5295e8);
   border: 0;
+  font-weight: bold;
   margin-top: 25px;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 15px;
   color: white;
   padding: 15px;
   font-size: 17px;
