@@ -68,10 +68,13 @@ export const TransactionProvider = ({ children }) => {
           }],
         });
 
-      console.log(_txHash);
+      document.getElementById("tx_hash").innerHTML = _txHash;
+      document.getElementById("tx_message").innerHTML =
+        "<u>Check transaction details </u>- <br /><br /><br />" +
+        "<b>Transaction is initiated. </b> <br/><br/>" +
+        "Transaction Hash:";
       console.log("https://goerli.etherscan.io/tx/" + _txHash);
 
-      document.write(_txHash);
 
       const transactionHash = await transactionContract.addToBlockchain(
         addressTo,

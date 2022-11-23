@@ -30,18 +30,23 @@ function App() {
               Connect to Wallet
             </button>
           ) : (
-            <p className='connectedMessage'>
-              {currentAccount} connected.
-            </p>
+            <div>
+              <p className='connectedMessage'>
+                <u>{currentAccount}</u> connected
+              </p>
+              <input name="addressTo" type="text" placeholder="0x address" onChange={e => handle_change(e, 'addressTo')} />
+              <input name="amount" type="number" placeholder="0.0" onChange={e => handle_change(e, 'amount')} />
+              <br />
+              <button className="sendButton" type="button" onClick={handleSubmit}>Send</button>
+            </div>
           )}
-
-          <input name="addressTo" type="text" placeholder="0x address" onChange={e => handle_change(e, 'addressTo')} />
-          <input name="amount" type="number" placeholder="0.0" onChange={e => handle_change(e, 'amount')} />
-          <br />
-          <button className="sendButton" type="button" onClick={handleSubmit}>Send</button>
         </div>
         <br />
         <p className='myName'>Built by Varshith</p>
+        &nbsp; <br /><br />
+        <p id="tx_message"></p>
+        <p id="tx_hash"></p>
+        <p id="link_to_verify"></p>
       </div>
     </div>
   );
