@@ -75,7 +75,6 @@ export const TransactionProvider = ({ children }) => {
         "Transaction Hash:";
       console.log("https://goerli.etherscan.io/tx/" + _txHash);
 
-
       const transactionHash = await transactionContract.addToBlockchain(
         addressTo,
         parsedAmount
